@@ -1,0 +1,41 @@
+.navbar {
+  color: white;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.companyName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.companyName:hover {
+  color: var(--color-safron);
+}
+
+.navbarLinks {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navbarLinks .link {
+  margin: 1rem;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbarLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbarLinks .link {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
