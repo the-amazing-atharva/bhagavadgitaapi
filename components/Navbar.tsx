@@ -2,6 +2,8 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import styles from "../styles/navbar.module.css";
 
+import TypingEffect from "./TypingEffect";
+
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<any | null>(() => null);
 
@@ -26,7 +28,9 @@ const Navbar: React.FC = () => {
     <>
       <nav className={styles.nav}>
         <div className={styles.nav_text}>
-          <h1>Bhagavad Gita.</h1>
+          <h1>
+            <TypingEffect />
+          </h1>
         </div>
 
         <ul className={styles.nav_links}>
