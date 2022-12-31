@@ -1,8 +1,27 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/navbar.module.css";
 
 const Navbar: React.FC = () => {
+  const [nav, setNav] = useState<any | null>(() => null);
+
+  useEffect(() => {
+    let lastScrollPosition = 0;
+    setNav(true);
+
+    document.addEventListener(
+      "scroll",
+      () => {
+        if (window.scrollY > lastScrollPosition) {
+          setNav(false);
+        } else {
+          setNav(true);
+        }
+        lastScrollPosition = window.scrollY;
+      },
+      { passive: true }
+    );
+  }, []);
   return (
     <>
       <nav className={styles.nav}>
