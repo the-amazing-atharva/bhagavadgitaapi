@@ -5,27 +5,55 @@ import styles from "../styles/navbar.module.css";
 const Navbar: React.FC = () => {
   return (
     <>
-      <nav className={styles.navbar}>
-        <div className={styles.companyName}>
-          <h1>My Company</h1>
+      <nav className={styles.nav}>
+        <div className={styles.nav_text}>
+          <h1>Bhagavad Gita.</h1>
         </div>
-        <div className={styles.navbarLinks}>
-          <Link className={styles.link} href="/">
-            Home
-          </Link>
-          <Link className={styles.link} href="/about">
-            About
-          </Link>
-          <Link className={styles.link} href="/services">
-            Services
-          </Link>
-          <Link className={styles.link} href="/contact">
-            Contact
-          </Link>
-          <Link className={styles.link} href="/login">
-            Login
-          </Link>
-        </div>
+
+        <ul className={styles.nav_links}>
+          <input className={styles.navInput} type="checkbox" id="check" />
+          <label htmlFor="check" className={styles.checkBtn}>
+            &#9776;
+          </label>
+
+          <div className={styles.menu}>
+            <li>
+              <Link href="/" className={styles.menuBtn}>
+                <span className={styles.navSpan}>|| </span>
+                Shlok
+                <span className={styles.navSpan}> ||</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className={styles.menuBtn}>
+                <span className={styles.navSpan}>|| </span>
+                Chapters
+                <span className={styles.navSpan}> ||</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className={styles.menuBtn}>
+                <span className={styles.navSpan}>|| </span>
+                Author
+                <span className={styles.navSpan}> ||</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className={styles.menuBtn}>
+                <span className={styles.navSpan}>|| </span>
+                Api
+                <span className={styles.navSpan}> ||</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className={styles.menuBtn}>
+                <span className={styles.navSpan}>|| </span>
+                Contact
+                <span className={styles.navSpan}> ||</span>
+              </Link>
+            </li>
+          </div>
+        </ul>
       </nav>
     </>
   );
