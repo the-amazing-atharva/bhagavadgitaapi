@@ -26,7 +26,20 @@ const Navbar: React.FC = () => {
   }, []);
   return (
     <>
-      <nav className={styles.nav}>
+      <nav
+        style={
+          nav
+            ? {
+                opacity: 1,
+                top: 0,
+              }
+            : {
+                opacity: 0,
+                top: "-100%",
+              }
+        }
+        className={styles.nav}
+      >
         <div className={styles.nav_text}>
           <h1>
             <TypingEffect />
