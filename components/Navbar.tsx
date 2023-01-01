@@ -6,6 +6,48 @@ import TypingEffect from "./TypingEffect";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<any | null>(() => null);
+  // trail fnc
+  const [verse, setVerse] = useState("Verse");
+  const [chapter, setChapter] = useState("Chapter");
+  const [author, setAuthor] = useState("Author");
+  const [api, setApi] = useState("Api");
+  const [contact, setContact] = useState("Contact");
+
+  const [verseHref, setVerseHref] = useState("/shlok");
+  const [chapterHref, setChapterHref] = useState("/chapters");
+  const [authorHref, setAuthorHref] = useState("/author");
+  const [apiHref, setApiHref] = useState("/documentation");
+  const [contactHref, setContactHref] = useState("/contact");
+
+  useEffect(() => {
+    if (window.location.pathname === "/shlok") {
+      setVerse("Home");
+      setVerseHref("/");
+    } else if (window.location.pathname === "/chapters") {
+      setChapter("Home");
+      setChapterHref("/");
+    } else if (window.location.pathname === "/author") {
+      setAuthor("Home");
+      setAuthorHref("/");
+    } else if (window.location.pathname === "/documentation") {
+      setApi("Home");
+      setApiHref("/");
+    } else if (window.location.pathname === "/contact") {
+      setContact("Home");
+      setContactHref("/");
+    } else if (window.location.pathname === "/") {
+      setVerse("Verse");
+      setVerseHref("/shlok");
+      setChapter("Chapter");
+      setChapterHref("/chapters");
+      setAuthor("Author");
+      setAuthorHref("/author");
+      setApi("Api");
+      setApiHref("/documentation");
+      setContact("Contact");
+      setContactHref("/contact");
+    }
+  }, []);
 
   useEffect(() => {
     let lastScrollPosition = 0;
@@ -54,37 +96,37 @@ const Navbar: React.FC = () => {
 
           <div className={styles.menu}>
             <li>
-              <Link href="/shlok" className={styles.menuBtn}>
+              <Link href={verseHref} className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
-                Shlok
+                {verse}
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/chapters" className={styles.menuBtn}>
+              <Link href={chapterHref} className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
-                Chapters
+                {chapter}
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/author" className={styles.menuBtn}>
+              <Link href={authorHref} className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
-                Author
+                {author}
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/documentation" className={styles.menuBtn}>
+              <Link href={apiHref} className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
-                Api
+                {api}
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={styles.menuBtn}>
+              <Link href={contactHref} className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
-                Contact
+                {contact}
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
@@ -96,13 +138,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-// <NavbarContainer>
-//   <CompanyName>My Company</CompanyName>
-//   <NavbarLinks>
-//     <Link href="/">Home</Link>
-//     <Link href="/about">About</Link>
-//     <Link href="/services">Services</Link>
-//     <Link href="/contact">Contact</Link>
-//   </NavbarLinks>
-// </NavbarContainer>
