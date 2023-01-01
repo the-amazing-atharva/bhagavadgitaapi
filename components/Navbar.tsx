@@ -41,35 +41,35 @@ const Navbar: React.FC = () => {
 
           <div className={styles.menu}>
             <li>
-              <Link href="/" className={styles.menuBtn}>
+              <Link href="/shlok" className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
                 Shlok
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/" className={styles.menuBtn}>
+              <Link href="/chapters" className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
                 Chapters
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/" className={styles.menuBtn}>
+              <Link href="/author" className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
                 Author
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/" className={styles.menuBtn}>
+              <Link href="/documentation" className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
                 Api
                 <span className={styles.navSpan}> ||</span>
               </Link>
             </li>
             <li>
-              <Link href="/" className={styles.menuBtn}>
+              <Link href="/contact" className={styles.menuBtn}>
                 <span className={styles.navSpan}>|| </span>
                 Contact
                 <span className={styles.navSpan}> ||</span>
