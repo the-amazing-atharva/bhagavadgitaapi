@@ -11,7 +11,6 @@ const TypingEffect = () => {
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
 
-  // typeWriter
   useEffect(() => {
     if (index === words.length - 1 && subIndex === words[index].length) {
       return;
@@ -42,7 +41,6 @@ const TypingEffect = () => {
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse]);
 
-  // blinker
   useEffect(() => {
     const timeout2 = setTimeout(() => {
       setBlink((prev) => !prev);
