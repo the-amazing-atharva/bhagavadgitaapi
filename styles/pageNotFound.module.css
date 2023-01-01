@@ -1,0 +1,126 @@
+.main_container {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--color-bg);
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  max-width: 100%;
+  margin: 1rem;
+  overflow: hidden;
+  width: 45rem;
+}
+
+.left_container {
+  background-color: #2a265f;
+  color: #fff;
+  padding: 30px;
+  max-width: 250px;
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-gray);
+  text-align: center;
+}
+
+.left_container .h2 {
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.left_container .small {
+  opacity: 0.6;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.right_container {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.textShlok {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  border-bottom: 1px solid var(--color-neon);
+}
+
+.textMeaning {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.homeBtn {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  font-size: 1rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.homeBtn:hover {
+  background: var(--color-white);
+  color: black;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ==================== MEDIA QUERIES (Tablets) ==================== */
+@media only screen and (max-width: 1200px) {
+}
+
+/* ==================== MEDIA QUERIES (Big SmartPhones) ==================== */
+@media only screen and (max-width: 600px) {
+  .main_container {
+    margin: 0;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+    flex-direction: column;
+    border-radius: 0;
+    align-items: center;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    /* margin-top: 50%; */
+    border-radius: 0;
+  }
+
+  .left_container {
+    margin-bottom: 1rem;
+  }
+
+  .textShlok {
+    font-size: 1rem;
+  }
+
+  .textMeaning {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==================== MEDIA QUERIES (Small SmartPhones) ==================== */
+@media only screen and (max-width: 425px) {
+}
