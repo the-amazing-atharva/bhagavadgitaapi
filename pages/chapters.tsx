@@ -1,7 +1,13 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const chapters = () => {
-  return <div>chapters</div>;
+  return (
+    <div>
+      <Navbar />
+      chapters
+    </div>
+  );
 };
 
 export default chapters;

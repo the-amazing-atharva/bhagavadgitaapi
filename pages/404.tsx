@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 import styles from "../styles/pageNotFound.module.css";
 
 const PageNotFound = () => {
@@ -14,6 +15,7 @@ const PageNotFound = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/krishna.ico" />
       </Head>
+      <Navbar />
       <div className={styles.main_container}>
         <div className={styles.container}>
           <div className={styles.left_container}>
