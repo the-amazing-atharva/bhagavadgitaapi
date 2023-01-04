@@ -25,22 +25,19 @@ const HomeContainer = () => {
         </div>
         <div className={styles.buttonBox}>
           <Link className={styles.btn} onClick={() => {}} href="#">
-            Btn1
+            Previous Chapter
           </Link>
           <Link className={styles.btn} onClick={() => {}} href="#">
-            Btn2
+            Previous Shlok
           </Link>
           <Link className={styles.btn} onClick={() => {}} href="#">
-            Btn3
+            Random
           </Link>
           <Link className={styles.btn} onClick={() => {}} href="#">
-            Btn4
+            Next Shlok
           </Link>
           <Link className={styles.btn} onClick={() => {}} href="#">
-            Btn5
-          </Link>
-          <Link className={styles.btn} onClick={() => {}} href="#">
-            Btn6
+            Next Chapter
           </Link>
         </div>
       </div>
