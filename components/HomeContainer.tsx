@@ -39,6 +39,9 @@ const HomeContainer = () => {
           <Link className={styles.btn} onClick={() => {}} href="#">
             Btn5
           </Link>
+          <Link className={styles.btn} onClick={() => {}} href="#">
+            Btn6
+          </Link>
         </div>
       </div>
     </div>
