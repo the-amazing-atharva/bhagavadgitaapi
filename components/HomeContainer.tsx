@@ -4,15 +4,15 @@ import styles from "../styles/homeContainer.module.css";
 
 const HomeContainer = () => {
   const [shlok, setShlok] = useState(
-    "धृतराष्ट्र उवाच | धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |\n मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ||१-१||"
+    "धृतराष्ट्र उवाच |\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ||१-१||"
   );
 
   const [pronc, setPronc] = useState(
-    "dhṛtarāṣṭra uvāca . dharmakṣetre kurukṣetre samavetā yuyutsavaḥ . māmakāḥ pāṇḍavāścaiva kimakurvata sañjaya ||1-1||"
+    "dhṛtarāṣṭra uvāca .\ndharmakṣetre kurukṣetre samavetā yuyutsavaḥ .\nmāmakāḥ pāṇḍavāścaiva kimakurvata sañjaya ||1-1||"
   );
 
   const [shlokMeaning, setShlokMeaning] = useState(
-    "1.1. Dhrtarastra said O Sanjaya, what did my sons (and others) and Pandu's sons (and others) actually do when, eager for battle, they assembled on the sacred field, the Kuruksetra (Field of the Kurus)?"
+    "1.1. Dhrtarastra said  O Sanjaya, what did my sons (and others) and Pandu's sons (and others) actually do when, eager for battle, they assembled on the sacred field, the Kuruksetra (Field of the Kurus)?"
   );
 
   return (
