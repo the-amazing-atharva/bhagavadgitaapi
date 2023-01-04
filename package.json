@@ -1,6 +1,6 @@
 {
   "name": "bhagavadapi",
-  "version": "V2.",
+  "version": "2.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
