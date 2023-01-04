@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import HomeContainer from "./HomeContainer";
 
 // components
@@ -9,6 +10,7 @@ const HomePage: React.FC = () => {
     <>
       <Navbar />
       <HomeContainer />
+      <Footer />
     </>
   );
 };
