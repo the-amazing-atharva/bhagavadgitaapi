@@ -75,6 +75,9 @@
   .nav {
     background-color: var(--color-bg-variant);
   }
+  .nav_text {
+    font-size: 1.2rem;
+  }
 
   .menu {
     display: none;
@@ -135,6 +138,9 @@
     padding: 0 30px;
   }
 
+  .nav_text {
+    font-size: 1rem;
+  }
   .menuBtn {
     margin-left: 35%;
     margin-right: 35%;
@@ -147,7 +153,7 @@
     padding: 0 20px;
   }
   .nav_text {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 
   .menuBtn {
