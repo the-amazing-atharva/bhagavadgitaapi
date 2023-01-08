@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "../styles/verse.module.css";
-import { data } from "../assets/extra/verse";
+ 
 
-const Verse = () => {
+const Verse = ({data}:any) => {
   return (
     <>
-      {data.map(({ id, chapter_number, verse_number, text, title }) => {
+      {data.map(({ id, chapter_number, verse_number, text, title }:any) => {
         return (
           <>
-            <div className={styles.manuscript_card}>
-              <div id={`${id}`} className={styles.manuscript_card_header}>
+            <div key={id} className={styles.manuscript_card}>
+              <div id={`${id}`} key={id} className={styles.manuscript_card_header}>
                 <div className={styles.manuscript_title}>
                   <h1>{title}</h1>
                 </div>
