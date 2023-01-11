@@ -6,7 +6,6 @@ import TypingEffect from "./TypingEffect";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState<any | null>(() => null);
-  // trail fnc
   const [verse, setVerse] = useState("Verse");
   const [chapter, setChapter] = useState("Chapter");
   const [author, setAuthor] = useState("Author");
