@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   const [contact, setContact] = useState("Contact");
 
   const [verseHref, setVerseHref] = useState("/shlok");
-  const [chapterHref, setChapterHref] = useState("/chapters");
+  const [chapterHref, setChapterHref] = useState("/chapter");
   const [authorHref, setAuthorHref] = useState("/author");
   const [apiHref, setApiHref] = useState("/documentation");
   const [contactHref, setContactHref] = useState("/contact");
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     if (window.location.pathname === "/shlok") {
       setVerse("Home");
       setVerseHref("/");
-    } else if (window.location.pathname === "/chapters") {
+    } else if (window.location.pathname === "/chapter") {
       setChapter("Home");
       setChapterHref("/");
     } else if (window.location.pathname === "/author") {
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
       setVerse("Verse");
       setVerseHref("/shlok");
       setChapter("Chapter");
-      setChapterHref("/chapters");
+      setChapterHref("/chapter");
       setAuthor("Author");
       setAuthorHref("/author");
       setApi("Api");
