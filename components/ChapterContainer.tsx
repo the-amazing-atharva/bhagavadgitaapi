@@ -1,82 +1,80 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/chapters.module.css";
 
-const Component = async () => {
-  const data = await fetch("/api/chapter").then((res) => res.json());
+const CardComponent = () => {
+  interface Chapter {
+    id: number;
+    chapter_number: number;
+    chapter_summary: string;
+    chapter_summary_hindi: string;
+    name_translation: string;
+    verses_count: number;
+  }
+  const [data, setData] = useState<Chapter[]>([]);
+  const [hindi, setHindi] = useState<boolean>(false);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("http://localhost:3000/api/chapter");
+      const data = await response.json();
+      console.log(data);
+      setData(data);
+    }
+    fetchData();
+  }, []);
+
   return (
-    <>
-      {data.map(
-        ({
-          id,
-          chapter_number,
-          chapter_summary,
-          chapter_summary_hindi,
-          name_translation,
-          verse_count,
-        }: any) => {
-          return (
-            <>
-              <div className={styles.container}>
-                <div className={styles.card}>
-                  <div className={`${styles.face} ${styles.face1}`}>
-                    <div className="content">
-                      <span className={styles.stars}></span>
-                      <h2 className={styles.cardText}>
-                        {data.name_translation}
-                      </h2>
-                      <p className={styles.cardText}>
-                        Java is a class-based, object-oriented programming
-                        language that is designed to have as few implementation
-                        dependencies as possible.
-                      </p>
-                    </div>
-                  </div>
-                  <div className={`${styles.face} ${styles.face2}`}>
-                    <h2>01</h2>
-                  </div>
+    <div className={styles.container}>
+      <div className="btnDiv">
+        <div className={styles.languageBtn}>
+          <input
+            id="languageBtn"
+            type="checkbox"
+            className={`${styles.check_toggle} ${styles.check_toggle_round_flat}`}
+            onChange={() => setHindi(!hindi)}
+          />
+          <label htmlFor="languageBtn"></label>
+          <span className={styles.en}>EN</span>
+          <span className={styles.hi}>HI</span>
+        </div>
+      </div>
+
+      {data.map((chapter: Chapter) => {
+        return (
+          <>
+            <div key={chapter.id} className={styles.card}>
+              <div className={styles.face1}>
+                <div className={styles.content}>
+                  <span className={styles.contentTitle}>
+                    <h1>{chapter.name_translation}</h1>
+                    <span className={styles.titleText}>
+                      <strong>Verse Count:</strong> {chapter.verses_count}
+                      {"\n"}
+                      <strong>Chapter Number:</strong> {chapter.chapter_number}
+                    </span>
+                  </span>
+                  <p className={styles.cardText}>
+                    {hindi
+                      ? chapter.chapter_summary
+                      : chapter.chapter_summary_hindi}
+                  </p>
                 </div>
               </div>
-            </>
-          );
-        }
-      )}
-    </>
+              <div className={styles.face2}>
+                <h2>{chapter.name_translation}</h2>
+              </div>
+            </div>
+          </>
+        );
+      })}
+    </div>
   );
 };
-
-// import { useState, useEffect } from "react";
-
-// function MyComponent() {
-//   const [promiseData, setPromiseData] = useState<DataType | null>(null);
-//   const [isLoading, setIsLoading] = useState(true);
-//   const [error, setError] = useState<Error | null>(null);
-
-//   useEffect(() => {
-//     setIsLoading(true);
-//     myPromise()
-//       .then((data: DataType) => {
-//         setPromiseData(data);
-//         setIsLoading(false);
-//       })
-//       .catch((e: Error) => {
-//         setError(e);
-//         setIsLoading(false);
-//       });
-//   }, []);
-
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   } else if (error) {
-//     return <div>Error: {error.message}</div>;
-//   } else {
-//     return <div>Data: {promiseData}</div>;
-//   }
-// }
 
 const ChapterContainer = () => {
   return (
     <>
-      <Component />
+      <CardComponent />
     </>
   );
 };
