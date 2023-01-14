@@ -4,10 +4,9 @@
 }
 
 .btnDiv {
-  border: 1px solid black;
+  margin: 1rem;
   display: flex;
   justify-content: center;
-  padding: 1rem;
 }
 
 .languageBtn {
@@ -18,11 +17,10 @@
 
 .languageBtn > span {
   position: absolute;
-  top: 14px;
+  top: 0.5rem;
   pointer-events: none;
-  font-family: "Helvetica", Arial, sans-serif;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   width: 50%;
@@ -30,23 +28,24 @@
 }
 
 input.check_toggle_round_flat:checked ~ .off {
-  color: #f36f25;
+  color: var(--color-safron);
 }
 
 input.check_toggle_round_flat:checked ~ .on {
-  color: #ffff;
-}
-
-.languageBtn > span.en {
-  left: 0;
-  padding-left: 2px;
-  color: #f36f25;
+  color: var(--color-neon);
 }
 
 .languageBtn > span.hi {
+  left: 0;
+  /* padding-left: 2px; */
+  color: var(--color-neon);
+}
+
+.languageBtn > span.en {
   right: 0;
-  padding-right: 4px;
-  color: #fff;
+  color: var(--color-safron);
+
+  /* padding-right: 2em; */
 }
 
 .check_toggle {
@@ -67,15 +66,17 @@ input.check_toggle_round_flat:checked ~ .on {
 }
 
 input.check_toggle_round_flat + label {
-  padding: 2px;
-  width: 97px;
-  height: 35px;
-  background-color: #f36f25;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
+  padding: 0;
+  width: 6rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  border-radius: 5rem;
 }
 input.check_toggle_round_flat + label:before,
 input.check_toggle_round_flat + label:after {
@@ -89,23 +90,23 @@ input.check_toggle_round_flat + label:before {
   left: 2px;
   bottom: 2px;
   right: 2px;
-  background-color: #f36f25;
-  -webkit-moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
+  background-color: (--color-neon);
+  -webkit-moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  border-radius: 5rem;
 }
 input.check_toggle_round_flat + label:after {
   top: 4px;
   left: 4px;
   bottom: 4px;
-  width: 48px;
-  background-color: #fff;
-  -webkit-border-radius: 52px;
-  -moz-border-radius: 52px;
-  -ms-border-radius: 52px;
-  -o-border-radius: 52px;
-  border-radius: 52px;
+  width: 45%;
+  background-color: var(--color-gray);
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+  -ms-border-radius: 55px;
+  -o-border-radius: 55px;
+  border-radius: 55px;
   -webkit-transition: margin 0.2s;
   -moz-transition: margin 0.2s;
   -o-transition: margin 0.2s;
@@ -120,10 +121,16 @@ input.check_toggle_round_flat:checked + label:after {
 }
 
 .card {
+  position: relative;
   margin: 2.5rem 10rem;
   padding: 2.5rem 0.75rem;
   width: fit-content;
   border-radius: 1.25rem;
+  box-shadow: 0 15px 5rem rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+  background: transparent;
 }
 
 .content {
@@ -164,4 +171,171 @@ input.check_toggle_round_flat:checked + label:after {
   margin: 2rem 0rem;
   font-size: 1rem;
   font-weight: 200;
+}
+
+/* ==================== MEDIA QUERIES (Tablets) ==================== */
+@media only screen and (max-width: 1200px) {
+  .card {
+    margin: 2.5rem 5rem;
+  }
+
+  .contentTitle h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .contentTitle {
+    flex-direction: column;
+  }
+
+  .titleText {
+    margin-top: 0.5rem;
+  }
+
+  .btnDiv {
+    margin: 0.5rem;
+  }
+
+  .languageBtn {
+    margin: 0.5rem;
+  }
+
+  .languageBtn > span {
+    top: 0.25rem;
+  }
+}
+
+/* ==================== MEDIA QUERIES (Big SmartPhones) ==================== */
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: 2.5rem 2.5rem;
+  }
+
+  .contentTitle h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.75rem;
+  }
+
+  .contentTitle {
+    flex-direction: column;
+  }
+
+  .titleText {
+    margin-top: 0.5rem;
+  }
+
+  .btnDiv {
+    margin: 0.5rem;
+  }
+
+  .languageBtn {
+    margin: 0.5rem;
+  }
+
+  .languageBtn > span {
+    top: 0.25rem;
+  }
+
+  .languageBtn > span.hi {
+    left: 0;
+    padding-left: 0.5rem;
+  }
+
+  .languageBtn > span.en {
+    right: 0;
+    padding-right: 0.5rem;
+  }
+
+  .check_toggle_round_flat + label {
+    width: 4rem;
+    height: 1.5rem;
+  }
+
+  .check_toggle_round_flat + label:after {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 45%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+  }
+
+  .check_toggle_round_flat:checked + label:after {
+    margin-left: 24px;
+  }
+}
+
+/* ==================== MEDIA QUERIES (Small SmartPhones) ==================== */
+@media only screen and (max-width: 425px) {
+  .card {
+    margin: 2.5rem 1rem;
+  }
+
+  .contentTitle h1 {
+    font-size: 1.25rem;
+  }
+
+  .content p {
+    font-size: 0.5rem;
+  }
+
+  .contentTitle {
+    flex-direction: column;
+  }
+
+  .titleText {
+    margin-top: 0.5rem;
+  }
+
+  .btnDiv {
+    margin: 0.5rem;
+  }
+
+  .languageBtn {
+    margin: 0.5rem;
+  }
+
+  .languageBtn > span {
+    top: 0.25rem;
+  }
+
+  .languageBtn > span.hi {
+    left: 0;
+    padding-left: 0.5rem;
+  }
+
+  .languageBtn > span.en {
+    right: 0;
+    padding-right: 0.5rem;
+  }
+
+  .check_toggle_round_flat + label {
+    width: 3rem;
+    height: 1.25rem;
+  }
+
+  .check_toggle_round_flat + label:after {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 45%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+  }
+
+  .check_toggle_round_flat:checked + label:after {
+    margin-left: 24px;
+  }
 }

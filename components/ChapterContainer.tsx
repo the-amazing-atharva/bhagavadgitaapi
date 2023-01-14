@@ -4,6 +4,7 @@ import styles from "../styles/chapters.module.css";
 const CardComponent = () => {
   interface Chapter {
     id: number;
+    name: string;
     chapter_number: number;
     chapter_summary: string;
     chapter_summary_hindi: string;
@@ -25,7 +26,7 @@ const CardComponent = () => {
 
   return (
     <div className={styles.container}>
-      <div className="btnDiv">
+      <div className={styles.btnDiv}>
         <div className={styles.languageBtn}>
           <input
             id="languageBtn"
@@ -34,8 +35,8 @@ const CardComponent = () => {
             onChange={() => setHindi(!hindi)}
           />
           <label htmlFor="languageBtn"></label>
-          <span className={styles.en}>EN</span>
           <span className={styles.hi}>HI</span>
+          <span className={styles.en}>EN</span>
         </div>
       </div>
 
@@ -43,7 +44,7 @@ const CardComponent = () => {
         return (
           <>
             <div key={chapter.id} className={styles.card}>
-              <div className={styles.face1}>
+              <div className={`${styles.face} ${styles.face1}`}>
                 <div className={styles.content}>
                   <span className={styles.contentTitle}>
                     <h1>{chapter.name_translation}</h1>
@@ -60,9 +61,9 @@ const CardComponent = () => {
                   </p>
                 </div>
               </div>
-              <div className={styles.face2}>
+              {/* <div className={`${styles.face} ${styles.face2}`}>
                 <h2>{chapter.name_translation}</h2>
-              </div>
+              </div> */}
             </div>
           </>
         );
