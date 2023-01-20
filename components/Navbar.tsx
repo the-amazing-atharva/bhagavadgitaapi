@@ -12,14 +12,14 @@ const Navbar: React.FC = () => {
   const [api, setApi] = useState("Api");
   const [contact, setContact] = useState("Contact");
 
-  const [verseHref, setVerseHref] = useState("/shlok");
+  const [verseHref, setVerseHref] = useState("/verse");
   const [chapterHref, setChapterHref] = useState("/chapter");
   const [authorHref, setAuthorHref] = useState("/author");
   const [apiHref, setApiHref] = useState("/documentation");
   const [contactHref, setContactHref] = useState("/contact");
 
   useEffect(() => {
-    if (window.location.pathname === "/shlok") {
+    if (window.location.pathname === "/verse") {
       setVerse("Home");
       setVerseHref("/");
     } else if (window.location.pathname === "/chapter") {
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
       setContactHref("/");
     } else if (window.location.pathname === "/") {
       setVerse("Verse");
-      setVerseHref("/shlok");
+      setVerseHref("/verse");
       setChapter("Chapter");
       setChapterHref("/chapter");
       setAuthor("Author");
