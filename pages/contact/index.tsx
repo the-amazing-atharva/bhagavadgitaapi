@@ -1,6 +1,6 @@
 import React from "react";
+import ContactContainer from "../../components/ContactContainer";
 import Navbar from "../../components/Navbar";
-import ContactContainer from "./ContactContainer";
 
 const index = () => {
   return (
