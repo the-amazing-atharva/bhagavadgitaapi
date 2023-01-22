@@ -4,10 +4,10 @@ import Navbar from "../../components/Navbar";
 
 const index = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <ContactContainer />
-    </div>
+    </>
   );
 };
 

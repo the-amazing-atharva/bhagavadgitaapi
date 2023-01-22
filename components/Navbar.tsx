@@ -10,13 +10,13 @@ const Navbar: React.FC = () => {
   const [chapter, setChapter] = useState("Chapter");
   const [author, setAuthor] = useState("Author");
   const [api, setApi] = useState("Api");
-  const [contact, setContact] = useState("Contact");
+  const [contact, setContact] = useState("Help");
 
   const [verseHref, setVerseHref] = useState("/verse");
   const [chapterHref, setChapterHref] = useState("/chapter");
   const [authorHref, setAuthorHref] = useState("/author");
   const [apiHref, setApiHref] = useState("/documentation");
-  const [contactHref, setContactHref] = useState("/contact");
+  const [contactHref, setContactHref] = useState("/help");
 
   useEffect(() => {
     if (window.location.pathname === "/verse") {
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
     } else if (window.location.pathname === "/documentation") {
       setApi("Home");
       setApiHref("/");
-    } else if (window.location.pathname === "/contact") {
+    } else if (window.location.pathname === "/help") {
       setContact("Home");
       setContactHref("/");
     } else if (window.location.pathname === "/") {
@@ -43,8 +43,8 @@ const Navbar: React.FC = () => {
       setAuthorHref("/author");
       setApi("Api");
       setApiHref("/documentation");
-      setContact("Contact");
-      setContactHref("/contact");
+      setContact("Help");
+      setContactHref("/help");
     }
   }, []);
 
