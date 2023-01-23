@@ -83,7 +83,8 @@ const Navbar: React.FC = () => {
       >
         <div className={styles.nav_text}>
           <h1>
-            <TypingEffect />
+            {/* <TypingEffect /> */}
+            || Bhagavad Gita ||
           </h1>
         </div>
 

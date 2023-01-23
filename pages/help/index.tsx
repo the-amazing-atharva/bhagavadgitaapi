@@ -1,12 +1,12 @@
 import React from "react";
-import ContactContainer from "../../components/ContactContainer";
+import HelpContainer from "../../components/HelpContainer";
 import Navbar from "../../components/Navbar";
 
 const index = () => {
   return (
     <>
       <Navbar />
-      <ContactContainer />
+      <HelpContainer />
     </>
   );
 };

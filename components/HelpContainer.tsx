@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/contact.module.css";
+import styles from "../styles/help.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +7,7 @@ import documentationLogo from "../assets/images/doc.png";
 import contactLogo from "../assets/images/contact.png";
 import issueLogo from "../assets/images/issue.png";
 
-const ContactContainer = () => {
+const HelpContainer = () => {
   return (
     <div className={styles.contact_container}>
       <div className={styles.title}>Contact Us</div>
@@ -70,4 +70,4 @@ const ContactContainer = () => {
   );
 };
 
-export default ContactContainer;
+export default HelpContainer;
