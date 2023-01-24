@@ -41,12 +41,12 @@ const FilterVerse = () => {
 
   return (
     <>
-      <div className="flex mb-5">
-        <div className="mr-5">
-          <label className="mr-1 text-lg">Chapter Number:</label>
+      <div className={styles.container_div}>
+        <div className={styles.margin_right}>
+          <label className={styles.lable_tag}>Chapter Number:</label>
           <select
             id="chapter-number"
-            className="w-20 p-1 text-center rounded-md mr-2 "
+            className={styles.select_tag}
             value={chapterNumber}
             onChange={(event) => {
               setChapterNumber(Number(event.target.value));
@@ -64,10 +64,10 @@ const FilterVerse = () => {
           </select>
         </div>
         <div className="verse-number">
-          <label className="mr-1 text-lg">Verse Number:</label>
+          <label className={styles.lable_tag}>Verse Number:</label>
           <select
             id="verse-number"
-            className="w-20 p-1 text-center rounded-md"
+            className={styles.select_tag}
             value={verseNumber}
             onChange={(event) => setVerseNumber(Number(event.target.value))}
           >
