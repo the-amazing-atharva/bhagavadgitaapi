@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import styles from "../styles/homeContainer.module.css";
+import styles from "../../styles/verse.module.css";
+import Navbar from "../../components/Navbar";
 
-const HomeContainer = () => {
+const index = () => {
   const [verseNumber, setVerseNumber] = useState(1);
   const [verse, setVerse] = useState(1);
   const [chapter, setChapter] = useState(1);
@@ -61,29 +62,32 @@ const HomeContainer = () => {
   };
 
   return (
-    <div className={`${styles.home_container} ${styles.container}`}>
-      <div className={styles.container_box}>
-        <div className={styles.contentBox}>
-          <h1 className={styles.shlok}>{shlok}</h1>
-          <p className={styles.pronc}>{pronc}</p>
-          <h2 className={styles.shlokMeaning}>{shlokMeaning}</h2>
+    <>
+      <Navbar />
+      <div className={`${styles.home_container} ${styles.container}`}>
+        <div className={styles.container_box}>
+          <div className={styles.contentBox}>
+            <h1 className={styles.shlok}>{shlok}</h1>
+            <p className={styles.pronc}>{pronc}</p>
+            <h2 className={styles.shlokMeaning}>{shlokMeaning}</h2>
 
-          <code>{`|| ${chaptherName} | Chapter: ${chapter}, Shlok: ${verse} ||`}</code>
-        </div>
-        <div className={styles.buttonBox}>
-          <Link className={styles.btn} onClick={prevShlok} href="#">
-            Previous Shlok
-          </Link>
-          <Link className={styles.btn} onClick={randomShlok} href="#">
-            Random
-          </Link>
-          <Link className={styles.btn} onClick={nextShlok} href="#">
-            Next Shlok
-          </Link>
+            <code>{`|| ${chaptherName} | Chapter: ${chapter}, Shlok: ${verse} ||`}</code>
+          </div>
+          <div className={styles.buttonBox}>
+            <Link className={styles.btn} onClick={prevShlok} href="#">
+              Previous Shlok
+            </Link>
+            <Link className={styles.btn} onClick={randomShlok} href="#">
+              Random
+            </Link>
+            <Link className={styles.btn} onClick={nextShlok} href="#">
+              Next Shlok
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default HomeContainer;
+export default index;

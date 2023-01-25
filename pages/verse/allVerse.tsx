@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import FilterVerse from "../components/Verse";
-import styles from "../styles/verse.module.css";
+import Navbar from "../../components/Navbar";
+import FilterVerse from "../../components/Verse";
+import styles from "../../styles/allVerse.module.css";
 
-const index = () => {
+const english = () => {
   return (
     <div>
       <Navbar />
@@ -11,7 +11,6 @@ const index = () => {
         <div className={styles.verseHeader}>
           <h1>Verse Title</h1>
         </div>
-
         <div className={styles.verseBody}>
           <FilterVerse />
         </div>
@@ -20,4 +19,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default english;
