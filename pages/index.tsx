@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 
 // components
 import HomePage from "../components/HomePage";
+import LandingPage from "../components/LandingPage";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/krishna.ico" />
       </Head>
       <main className={styles.main}>
-        <HomePage />
+        <LandingPage />
       </main>
     </>
   );
