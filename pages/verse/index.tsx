@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../../styles/verse.module.css";
 import Navbar from "../../components/Navbar";
 
-const index = () => {
-  const [verseNumber, setVerseNumber] = React.useState(1);
-  const [verse, setVerse] = React.useState(1);
-  const [chapter, setChapter] = React.useState(1);
-  const [chaptherName, setChapterName] = React.useState("Arjuna Visada Yoga");
-  const [shlok, setShlok] = React.useState(
+const Index = () => {
+  const [verseNumber, setVerseNumber] = useState(1);
+  const [verse, setVerse] = useState(1);
+  const [chapter, setChapter] = useState(1);
+  const [chaptherName, setChapterName] = useState("Arjuna Visada Yoga");
+  const [shlok, setShlok] = useState(
     "धृतराष्ट्र उवाच |\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ||१-१||"
   );
 
-  const [pronc, setPronc] = React.useState(
+  const [pronc, setPronc] = useState(
     "dhṛtarāṣṭra uvāca .\ndharmakṣetre kurukṣetre samavetā yuyutsavaḥ .\nmāmakāḥ pāṇḍavāścaiva kimakurvata sañjaya ||1-1||"
   );
 
-  const [shlokMeaning, setShlokMeaning] = React.useState(
+  const [shlokMeaning, setShlokMeaning] = useState(
     "1.1. Dhrtarastra said  O Sanjaya, what did my sons (and others) and Pandu's sons (and others) actually do when, eager for battle, they assembled on the sacred field, the Kuruksetra (Field of the Kurus)?"
   );
 
@@ -90,4 +90,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

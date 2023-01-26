@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import HomeContainer from "./HomeContainer";
+import LandingPage from "./LandingPage";
 
 // components
 import Navbar from "./Navbar";
@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Navbar />
-      <HomeContainer />
+      <LandingPage />
       <Footer />
     </>
   );
